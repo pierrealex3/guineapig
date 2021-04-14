@@ -48,7 +48,33 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.11.2</version>
+				<configuration>
+					<includes>
+						src/main/java/org/pa/guineapig/model/Mission.java,
+						src/main/java/org/pa/guineapig/model/Omission.java
+					</includes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>Checkout Files To Compare</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>checkout</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<connection>scm:git:https://github.com/pierrealex3/guineapig.git</connection>
+		<developerConnection>scm:git:https://github.com/pierrealex3/guineapig.git</developerConnection>
+	</scm>
 
 </project>

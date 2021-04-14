@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Mission {
 
-    private String reasonCode;
+    private String dtcReasonCode;
     private Integer amount;
     private List<String> comments = new ArrayList<>();
 
